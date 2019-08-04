@@ -29,11 +29,8 @@ log_reg.fit(X_train, y_train)
 
 y_pred = log_reg.predict(X_test)
 
+from sklearn.metrics import confusion_matrix
 
-
-
-
-
-
-
+cm = confusion_matrix(y_pred, y_test)
+print(cm)
 
