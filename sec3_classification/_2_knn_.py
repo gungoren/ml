@@ -8,6 +8,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix
 from sklearn.neighbors import KNeighborsClassifier
 
+
 df = pd.read_csv("../data/bilkav/sec1_preprocessing/veriler.csv")
 
 x = df.iloc[:, 1:4]
@@ -31,7 +32,7 @@ cm = confusion_matrix(y_pred, y_test)
 print(cm)
 
 print("------knn------")
-knn = KNeighborsClassifier(n_neighbors=5, metric='minkowski')
+knn = KNeighborsClassifier(n_neighbors=1, metric='minkowski')
 knn.fit(X_train, y_train)
 
 y_pred = knn.predict(X_test)
